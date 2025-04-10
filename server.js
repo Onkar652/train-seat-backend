@@ -8,12 +8,10 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 app.use(cors({
-    origin: [
-      'http://localhost:3000',
-      'https://train-booking-frontend.netlify.app' 
-    ],
+    origin: 'https://classy-lokum-dbab43.netlify.app',
     credentials: true
   }));
+  
   
   
 app.use(express.json());
