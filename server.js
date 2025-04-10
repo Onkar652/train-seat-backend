@@ -8,9 +8,14 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 app.use(cors({
-    origin: 'http://localhost:3000', // Frontend origin
+    origin: [
+      'http://localhost:3000',
+      'https://train-booking-frontend.netlify.app' 
+    ],
     credentials: true
   }));
+  
+  
 app.use(express.json());
 
 app.use('/api/seats', seatRoutes);
