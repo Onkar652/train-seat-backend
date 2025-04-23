@@ -8,7 +8,7 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Allowed origins for CORS
-const allowedOrigins = ['http://localhost:3000', 'https://classy-lokum-dbab43.netlify.app'];
+const allowedOrigins = ['http://localhost:3000', 'https://train-seat-backend.onrender.com'];
 
 app.use(cors({
   origin: (origin, callback) => {
