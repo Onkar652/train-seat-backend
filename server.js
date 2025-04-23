@@ -8,19 +8,19 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Allowed origins for CORS
-const allowedOrigins = ['http://localhost:3000', 'https://train-seat-backend.onrender.com'];
+const allowedOrigins = ['http://localhost:3000', 'https://train-seat-backend.onrender.com','https://rococo-hummingbird-afeb50.netlify.app'];
 
 app.use(cors({
   origin: (origin, callback) => {
-    // Allow requests with no origin (mobile apps, curl requests, etc.)
     if (!origin || allowedOrigins.includes(origin)) {
       callback(null, true);
     } else {
       callback(new Error('Not allowed by CORS'));
     }
   },
-  credentials: true, 
+  credentials: true,
 }));
+
 
 app.use(express.json());
 
